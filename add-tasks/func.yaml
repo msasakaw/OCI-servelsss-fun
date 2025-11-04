@@ -1,0 +1,11 @@
+schema_version: 20180708
+name: add-task
+version: 0.0.16
+runtime: python
+build_image: fnproject/python:3.11-dev
+run_image: fnproject/python:3.11
+entrypoint: /python/bin/fdk /function/func.py handler
+image: icn.ocir.io/orasejapan/functions/task-func/add-task:0.0.14
+memory: 256
+config:
+  NOSQL_TABLE_NAME: Todos
