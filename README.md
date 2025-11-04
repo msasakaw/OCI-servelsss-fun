@@ -30,30 +30,41 @@ npm run dev
 ```bash
 npm run build
 ```
-🐍 BackEnd Setup
+# 💻 Backend Setup
 
-バックエンドは OCI Functions (Python 3.11) をベースにしています。
-各フォルダが独立した関数としてデプロイされます。
+バックエンドは **OCI Functions (Python 3.11)** をベースにしています。
+各フォルダが**独立した関数**としてデプロイされます。
 
-📁 Directory Structure
-Backend/
-├── add-tasks/
-│   ├── func.py
-│   └── func.yaml
-├── delete-tasks/
-│   ├── func.py
-│   └── func.yaml
-├── edit-tasks/
-│   ├── func.py
-│   └── func.yaml
-└── list-tasks/
-    ├── func.py
-    └── func.yaml
+---
 
-🚢 Deploy to OCI
+### 📂 Directory Structure Backend
+
+以下のようなディレクトリ構成になっています。
+
+* `Backend/`
+    * `add-tasks/`
+        * `func.py`
+        * `func.yaml`
+    * `delete-tasks/`
+        * `func.py`
+        * `func.yaml`
+    * `edit-tasks/`
+        * `func.py`
+        * `func.yaml`
+    * `list-tasks/`
+        * `func.py`
+        * `func.yaml`
+
+---
+
+### 🚀 Deploy to OCI
 
 各 Function ディレクトリで以下のコマンドを実行してデプロイします。
+🚢 Deploy to OCI
 
+# 各 Function ディレクトリで以下のコマンドを実行してデプロイします
+
+```bash
 cd Backend/add-tasks
 fn deploy --app task-app
 
@@ -65,9 +76,4 @@ fn deploy --app task-app
 
 cd ../list-tasks
 fn deploy --app task-app
-
-🔍 Test Locally
-
-ローカル環境で関数を呼び出す場合：
-
-fn invoke task-app add-tasks
+```
