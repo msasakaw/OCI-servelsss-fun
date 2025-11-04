@@ -6,14 +6,10 @@
 - **FrontEnd**：Vue 3 + Vite によるフロントエンド  
 - **BackEnd**：OCI Functions (Python) によるサーバレス API  
 
----
-
 ## 🧩 Repository Structure
 OCI-servlesss-fun/
 ├── FrontEnd/ # Vue.js + Vite アプリ
 └── Backend/ # OCI Functions (Python)
-
----
 
 ## ⚙️ FrontEnd Setup
 
